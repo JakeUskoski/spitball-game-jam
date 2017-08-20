@@ -23,7 +23,7 @@ public class GenericController : MonoBehaviour {
 		// Setting up references.
 		m_GroundCheck = transform.Find("GroundCheck");
 		m_CeilingCheck = transform.Find("CeilingCheck");
-		m_Anim = GetComponent<Animator>();
+		m_Anim = GetComponentInChildren<Animator>();
 		m_Rigidbody2D = GetComponent<Rigidbody2D>();
 	}
 

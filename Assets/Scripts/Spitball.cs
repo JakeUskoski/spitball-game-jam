@@ -55,4 +55,9 @@ public class Spitball : MonoBehaviour {
 			}
 		}
 	}
+
+	public void HurtDuration() {
+		Debug.Log ("hello");
+		m_StickDuration -= 0.5f;
+	}
 }

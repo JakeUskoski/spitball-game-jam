@@ -178,7 +178,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Direction: 1
   m_Bouncing: 0
-  m_BounceDelay: 0.05
+  m_BounceDelay: 0.2
   m_DetectEdges: 1
 --- !u!114 &114994336560997182
 MonoBehaviour:

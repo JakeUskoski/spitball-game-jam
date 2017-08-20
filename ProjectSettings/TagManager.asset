@@ -9,6 +9,7 @@ TagManager:
   - EdgeGuard
   - Wall
   - Ground
+  - EnemyBlock
   layers:
   - Default
   - TransparentFX

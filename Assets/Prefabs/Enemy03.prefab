@@ -195,7 +195,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Direction: 1
   m_Bouncing: 1
-  m_BounceDelay: 0.1
+  m_BounceDelay: 0.2
   m_DetectEdges: 0
 --- !u!212 &212537119636776626
 SpriteRenderer:

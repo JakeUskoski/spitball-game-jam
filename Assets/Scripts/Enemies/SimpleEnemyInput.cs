@@ -68,7 +68,7 @@ public class SimpleEnemyInput : MonoBehaviour {
 	}
 
 	public void OnCollisionEnter2DInit(Collision2D coll) {
-		if (coll.gameObject.tag == "Wall" || coll.gameObject.tag == "Enemy") {
+		if (coll.gameObject.tag == "Wall" || coll.gameObject.tag == "Enemy" || coll.gameObject.tag == "Untagged") {
 			m_Direction *= -1;
 		} else if (coll.gameObject.tag == "Player") {
 			coll.gameObject.GetComponent<Combat> ().Damage ();

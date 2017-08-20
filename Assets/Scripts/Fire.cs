@@ -32,10 +32,6 @@ public class Fire : MonoBehaviour {
 		transform.localScale = Vector3.LerpUnclamped (m_StartScale, m_EndScale, currentTime);
 	}
 
-	private void FixedUpdate() {
-		
-	}
-
 	private void OnCollisionEnter2D(Collision2D coll) {
 		string tag = coll.gameObject.tag;
 
@@ -48,11 +44,11 @@ public class Fire : MonoBehaviour {
 						spitball.HurtDuration ();
 					}
 				}
-					
 				Destroy (gameObject);
 			}
 		} else {
-			//do damage
+			coll.gameObject.GetComponent<Combat> ().Damage ();
+			Destroy (gameObject);
 		}
 	}
 }

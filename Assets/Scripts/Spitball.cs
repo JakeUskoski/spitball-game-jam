@@ -44,6 +44,20 @@ public class Spitball : MonoBehaviour {
 				foreach(BoxCollider2D collider in colliders) {
 					collider.enabled = true;
 				}
+
+				bool flag = false;
+				Collider2D[] otherColliders = Physics2D.OverlapBoxAll(transform.position, transform.localScale, 0);
+				for (int i = 0; i < otherColliders.Length; i++)
+				{
+					if (otherColliders [i].gameObject.tag == "Enemy") {
+						otherColliders [i].gameObject.GetComponent<Combat> ().Damage ();
+						flag = true;
+					}
+				}
+
+				if (flag) {
+					Destroy (gameObject);
+				}
 			}
 
 			transform.position = currentPosition;

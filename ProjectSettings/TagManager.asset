@@ -10,6 +10,7 @@ TagManager:
   - Wall
   - Ground
   - EnemyBlock
+  - Spitball
   layers:
   - Default
   - TransparentFX

@@ -56,6 +56,7 @@ GameObject:
   - component: {fileID: 114208123349122072}
   - component: {fileID: 114558554008852812}
   - component: {fileID: 61705616332830492}
+  - component: {fileID: 114329007509226560}
   m_Layer: 0
   m_Name: CharacterRobotBoy
   m_TagString: Player
@@ -198,6 +199,19 @@ MonoBehaviour:
   m_WhatIsGround:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &114329007509226560
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1869908432261850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 286c5c40bc371aa4cac3e31a768f895c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MaxHealth: 3
+  m_InvincibilityDuration: 2
 --- !u!114 &114558554008852812
 MonoBehaviour:
   m_ObjectHideFlags: 1

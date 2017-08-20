@@ -10,6 +10,7 @@ public class SimpleEnemyInput : MonoBehaviour {
 	[SerializeField] private bool m_DetectEdges = false;
 
 	private GenericController m_Character;
+	private Combat combat;
 	private float flipCooldown = 0f;
 	private float bounceDelay = 0f;
 	private bool bounce;
@@ -17,6 +18,7 @@ public class SimpleEnemyInput : MonoBehaviour {
 
 	private void Awake() {
 		m_Character = GetComponent<GenericController>();
+		combat = GetComponent<Combat>();
 	}
 
 	private void Start() {
@@ -25,6 +27,9 @@ public class SimpleEnemyInput : MonoBehaviour {
 
 	private void Update() {
 		updateInit ();
+		if (combat.getHealth () == 0) {
+			Destroy (gameObject);
+		}
 	}
 
 	public void updateInit() {
@@ -65,6 +70,8 @@ public class SimpleEnemyInput : MonoBehaviour {
 	public void OnCollisionEnter2DInit(Collision2D coll) {
 		if (coll.gameObject.tag == "Wall" || coll.gameObject.tag == "Enemy") {
 			m_Direction *= -1;
+		} else if (coll.gameObject.tag == "Player") {
+			coll.gameObject.GetComponent<Combat> ().Damage ();
 		}
 	}
 

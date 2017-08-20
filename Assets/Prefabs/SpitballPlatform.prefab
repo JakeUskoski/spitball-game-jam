@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 114980576681209558}
   m_Layer: 0
   m_Name: SpitballPlatform
-  m_TagString: Untagged
+  m_TagString: Spitball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -72,7 +72,7 @@ GameObject:
   - component: {fileID: 50311588883656468}
   m_Layer: 0
   m_Name: Platform
-  m_TagString: Untagged
+  m_TagString: Spitball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 61793706146450898}
   m_Layer: 0
   m_Name: LeftSide
-  m_TagString: Untagged
+  m_TagString: Spitball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -104,7 +104,7 @@ GameObject:
   - component: {fileID: 61668503941586518}
   m_Layer: 0
   m_Name: RightSide
-  m_TagString: Untagged
+  m_TagString: Spitball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

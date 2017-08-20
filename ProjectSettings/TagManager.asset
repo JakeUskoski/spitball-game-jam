@@ -11,6 +11,9 @@ TagManager:
   - Ground
   - EnemyBlock
   - Spitball
+  - WinText
+  - LoseText
+  - TimerText
   layers:
   - Default
   - TransparentFX

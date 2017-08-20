@@ -53,7 +53,7 @@ GameObject:
   - component: {fileID: 61955490001365114}
   m_Layer: 0
   m_Name: LeftEdgeGuard
-  m_TagString: Untagged
+  m_TagString: EdgeGuard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -85,7 +85,7 @@ GameObject:
   - component: {fileID: 61152160114258788}
   m_Layer: 0
   m_Name: RightEdgeGuard
-  m_TagString: Untagged
+  m_TagString: EdgeGuard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

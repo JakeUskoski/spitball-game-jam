@@ -10,7 +10,6 @@ public class Spitball : MonoBehaviour {
 	[SerializeField] private Vector3 endScale = new Vector3 (1, 1, 1);
 
 	private Vector3 endPosition;
-	private float duration;
 	private bool moving;
 	private BoxCollider2D[] colliders;
 
@@ -25,7 +24,6 @@ public class Spitball : MonoBehaviour {
 	// Use this for initialization
 	private void Start () {
 		moving = true;
-		duration = 0f;
 		endPosition = new Vector3 (transform.position.x, transform.position.y, 0);
 	}
 	

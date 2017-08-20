@@ -9,6 +9,8 @@ TagManager:
   - EdgeGuard
   - Wall
   - Ground
+  - EnemyBlock
+  - Spitball
   layers:
   - Default
   - TransparentFX

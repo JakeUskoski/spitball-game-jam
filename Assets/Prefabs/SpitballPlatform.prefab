@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 114980576681209558}
   m_Layer: 0
   m_Name: SpitballPlatform
-  m_TagString: Untagged
+  m_TagString: Spitball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -69,9 +69,10 @@ GameObject:
   - component: {fileID: 4880285662918106}
   - component: {fileID: 212934277767791702}
   - component: {fileID: 61946337806050438}
+  - component: {fileID: 50311588883656468}
   m_Layer: 0
   m_Name: Platform
-  m_TagString: Untagged
+  m_TagString: Spitball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -87,7 +88,7 @@ GameObject:
   - component: {fileID: 61793706146450898}
   m_Layer: 0
   m_Name: LeftSide
-  m_TagString: Untagged
+  m_TagString: Spitball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -103,7 +104,7 @@ GameObject:
   - component: {fileID: 61668503941586518}
   m_Layer: 0
   m_Name: RightSide
-  m_TagString: Untagged
+  m_TagString: Spitball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -191,6 +192,26 @@ Transform:
   m_Father: {fileID: 4262083057665962}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &50311588883656468
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1595002662323450}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 1
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 6200000, guid: 0cb77231a430b454fb792ff7ffcc3943, type: 2}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
 --- !u!61 &61480457543491358
 BoxCollider2D:
   m_ObjectHideFlags: 1

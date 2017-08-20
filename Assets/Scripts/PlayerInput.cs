@@ -5,6 +5,7 @@ using UnityStandardAssets.CrossPlatformInput;
 
 public class PlayerInput : MonoBehaviour {
 
+	private Combat combat;
 	private GenericController m_Character;
 	private bool m_Jump;
 
@@ -12,11 +13,16 @@ public class PlayerInput : MonoBehaviour {
 	private void Awake()
 	{
 		m_Character = GetComponent<GenericController>();
+		combat = GetComponent<Combat>();
 	}
 
 
 	private void Update()
 	{
+		if (combat.getHealth () == 0) {
+			Destroy (gameObject);
+		}
+
 		if (!m_Jump)
 		{
 			// Read the jump input in Update so button presses aren't missed.

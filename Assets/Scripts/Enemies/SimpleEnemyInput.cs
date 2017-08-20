@@ -6,14 +6,21 @@ public class SimpleEnemyInput : MonoBehaviour {
 
 	[SerializeField] private float m_Direction = -1f;
 	[SerializeField] private bool m_Bouncing = false;
+	[SerializeField] private float m_BounceDelay = 0.2f;
 	[SerializeField] private bool m_DetectEdges = false;
 
 	private GenericController m_Character;
 	private float flipCooldown = 0f;
+	private float bounceDelay = 0f;
+	private bool bounce;
 
 
 	private void Awake() {
 		m_Character = GetComponent<GenericController>();
+	}
+
+	private void Start() {
+		bounce = m_Bouncing;
 	}
 
 	private void Update() {
@@ -34,7 +41,21 @@ public class SimpleEnemyInput : MonoBehaviour {
 	}
 
 	public void FixedUpdateInit() {
-		m_Character.Move(m_Direction, m_Bouncing);
+		if (m_Character.getGrounded () && bounceDelay > 0) {
+			bounceDelay -= Time.deltaTime;
+			if (bounceDelay <= 0) {
+				bounceDelay = 0;
+				if (m_Bouncing) {
+					bounce = true;
+				}
+			}
+		}
+
+		m_Character.Move(m_Direction, bounce);
+		if (bounce) {
+			bounceDelay = m_BounceDelay;
+			bounce = false;
+		}
 	}
 
 	private void OnCollisionEnter2D (Collision2D coll) {

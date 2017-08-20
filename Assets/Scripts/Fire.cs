@@ -13,11 +13,18 @@ public class Fire : MonoBehaviour {
 	private Vector3 startTravel;
 	private Vector3 endTravel;
 
+    private float turnSpeed;
+
+    public Sprite[] sprites;
+
 	// Use this for initialization
 	void Start () {
 		currentTime = 0f;
 		startTravel = transform.position;
 		endTravel = (transform.right * m_TravelDistance) + transform.position;
+
+        turnSpeed = Random.Range(-360, 360);
+        GetComponent<SpriteRenderer>().sprite = sprites[Random.Range(0, sprites.Length)];
 	}
 	
 	// Update is called once per frame
@@ -30,6 +37,8 @@ public class Fire : MonoBehaviour {
 
 		transform.position = Vector3.LerpUnclamped (startTravel, endTravel, currentTime);
 		transform.localScale = Vector3.LerpUnclamped (m_StartScale, m_EndScale, currentTime);
+
+        transform.Rotate(new Vector3(0, 0, turnSpeed * Time.deltaTime));
 	}
 
 	private void OnCollisionEnter2D(Collision2D coll) {
